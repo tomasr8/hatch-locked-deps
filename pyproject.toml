@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling==1.28.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hatch-locked-deps"
+dynamic = ["version"]
+requires-python = ">=3.11"
+dependencies = ["hatchling>=1.0.0"]
+
+[project.entry-points.hatch]
+locked-deps = "hatch_locked_deps.hook"
+
+[tool.hatch.version]
+path = "hatch_locked_deps/__init__.py"
+
+[dependency-groups]
+dev = ["pytest==9.0.2", "pytest-cov==7.0.0", "ruff>=0.15.0", "ty>=0.0.19"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["ANN", "COM812", "D"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["INP001", "S101", "S603", "S607", "TC003"]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
