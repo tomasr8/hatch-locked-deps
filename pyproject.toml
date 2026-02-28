@@ -5,10 +5,16 @@ build-backend = "hatchling.build"
 [project]
 name = "hatch-locked-deps"
 description = "A hatch plugin to lock dependencies at build time."
+authors = [{ name = "Tomas Roun", email = "tomas.roun8@gmail.com" }]
+keywords = ["hatch", "plugin", "dependency", "reproducible", "lockfile"]
 license = "MIT"
 dynamic = ["version"]
 requires-python = ">=3.11"
 dependencies = ["hatchling>=1.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/tomasr8/hatch-locked-deps"
+GitHub = "https://github.com/tomasr8/hatch-locked-deps"
 
 [project.entry-points.hatch]
 locked-deps = "hatch_locked_deps.hook"
