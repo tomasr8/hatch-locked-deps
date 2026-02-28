@@ -41,7 +41,7 @@ All options go under `[tool.hatch.build.hooks.locked-deps]`:
 lock-file = "pylock.toml"
 format = "pylock"
 exclude = ["numpy"]
-include-extras = ["postgres"]
+include-extras = ["test"]
 ```
 
 | Option | Description |
