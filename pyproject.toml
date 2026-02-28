@@ -5,6 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "hatch-locked-deps"
 description = "A hatch plugin to lock dependencies at build time."
+license = "MIT"
 dynamic = ["version"]
 requires-python = ">=3.11"
 dependencies = ["hatchling>=1.0.0"]
