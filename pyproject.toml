@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling==1.28.0"]
+requires = ["hatchling==1.29.0"]
 build-backend = "hatchling.build"
 
 [project]
@@ -23,7 +23,7 @@ locked-deps = "hatch_locked_deps.hook"
 path = "hatch_locked_deps/__init__.py"
 
 [dependency-groups]
-dev = ["pytest==9.0.2", "pytest-cov==7.0.0", "ruff>=0.15.0", "ty>=0.0.19"]
+dev = ["pytest==9.0.2", "pytest-cov==7.1.0", "ruff>=0.15.0", "ty>=0.0.19"]
 
 [tool.ruff]
 target-version = "py311"
